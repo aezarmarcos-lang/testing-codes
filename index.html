@@ -16,6 +16,7 @@
     --muted: #9ca3af;
     --highlight: #0f172a;
     --glow: 0 0 6px rgba(96, 165, 250, 0.35);
+    --keyword: #fbbf24;
 }
 
 * { box-sizing: border-box; }
@@ -59,7 +60,6 @@ section {
     margin-bottom: 45px;
 }
 
-/* Headings with SVG icons */
 h2 {
     color: var(--primary);
     border-left: 6px solid var(--accent);
@@ -93,7 +93,6 @@ h3 svg {
     filter: drop-shadow(0 0 5px var(--primary));
 }
 
-/* Badge with SVG */
 .badge {
     background-color: var(--highlight);
     padding: 4px 9px;
@@ -113,7 +112,6 @@ h3 svg {
     filter: drop-shadow(0 0 4px #38bdf8);
 }
 
-/* Notice with SVG */
 .notice {
     background: #020617;
     border-left: 6px solid var(--accent);
@@ -188,6 +186,11 @@ footer {
     color: var(--muted);
     border-top: 1px solid #0f172a;
 }
+    
+.keyword {
+    color: var(--keyword);
+    font-weight: 600;
+}
 </style>
 </head>
 
@@ -201,22 +204,16 @@ footer {
 
 <section>
     <h2>
-        <!-- Stethoscope SVG for main headings -->
         <svg viewBox="0 0 24 24"><path d="M18 2v6h-2V4h-2v4h-2V2h6zm-8 8h2v6h-2v-6zm4 0h2v2h-2v-2zm-6 6h2v6h-2v-6zm4 0h2v2h-2v-2z"/></svg>
         Classification of STIs
     </h2>
 
     <h3>
-        <!-- Pill SVG for subheadings -->
         <svg viewBox="0 0 24 24"><path d="M20.57 4.57c-1.76-1.76-4.61-1.76-6.36 0l-9.9 9.9a4.5 4.5 0 0 0 6.36 6.36l9.9-9.9c1.76-1.76 1.76-4.61 0-6.36zM6.41 17.41a2.5 2.5 0 0 1 0-3.54l4.24-4.24 3.54 3.54-4.24 4.24a2.5 2.5 0 0 1-3.54 0z"/></svg>
         Bacterial STIs
     </h3>
     <ul>
-        <li><span class="badge">
-            <!-- DNA SVG for badges -->
-            <svg viewBox="0 0 24 24"><path d="M12 2c1 0 1.83.39 2.49 1.02l-1.44 1.44C12.88 4.34 12.46 4 12 4c-.46 0-.88.34-1.05.46L9.51 3.02C10.17 2.39 11 2 12 2zm0 20c-1 0-1.83-.39-2.49-1.02l1.44-1.44c.17.12.59.46 1.05.46.46 0 .88-.34 1.05-.46l1.44 1.44C13.83 21.61 13 22 12 22zm-6-6v-2h4v2H6zm10 0v-2h4v2h-4z"/></svg>
-            Chlamydia
-        </span></li>
+        <li><span class="badge">Chlamydia</span></li>
         <li><span class="badge">Gonorrhea</span></li>
         <li><span class="badge">Syphilis</span></li>
     </ul>
@@ -261,10 +258,10 @@ footer {
                 <td>Chlamydia</td>
                 <td>Bacterial</td>
                 <td>
-                    A common bacterial infection often without symptoms.
-                    It spreads through sexual contact and is treatable with antibiotics,
-                    but untreated cases may lead to pelvic inflammatory disease (PID)
-                    and infertility.
+                    A common <span class="keyword">bacterial infection</span> often <span class="keyword">without symptoms</span>.
+                    It spreads through <span class="keyword">sexual contact</span> and is <span class="keyword">treatable</span> with <span class="keyword">antibiotics</span>,
+                    but <span class="keyword">untreated</span> cases may lead to <span class="keyword">pelvic inflammatory disease (PID)</span>
+                    and <span class="keyword">infertility</span>.
                 </td>
             </tr>
 
@@ -272,9 +269,9 @@ footer {
                 <td>Gonorrhea</td>
                 <td>Bacterial</td>
                 <td>
-                    An infection affecting the genitals, rectum, throat, or eyes.
-                    It may be asymptomatic and requires prompt antibiotic treatment
-                    to prevent complications.
+                    An <span class="keyword">infection</span> affecting the <span class="keyword">genitals</span>, <span class="keyword">rectum</span>, <span class="keyword">throat</span>, or <span class="keyword">eyes</span>.
+                    It may be <span class="keyword">asymptomatic</span> and requires <span class="keyword">prompt antibiotic treatment</span>
+                    to prevent <span class="keyword">complications</span>.
                 </td>
             </tr>
 
@@ -282,9 +279,9 @@ footer {
                 <td>Syphilis</td>
                 <td>Bacterial</td>
                 <td>
-                    Caused by <em>Treponema pallidum</em>. It progresses through distinct stages
-                    and can affect multiple organs, earning the nickname
-                    “the Great Imitator.”
+                    Caused by <em><span class="keyword">Treponema pallidum</span></em>. It progresses through <span class="keyword">distinct stages</span>
+                    and can affect <span class="keyword">multiple organs</span>, earning the nickname
+                    “<span class="keyword">the Great Imitator</span>.”
                 </td>
             </tr>
 
@@ -292,9 +289,9 @@ footer {
                 <td>HIV</td>
                 <td>Viral</td>
                 <td>
-                    A virus that attacks the immune system and may progress to AIDS
-                    if untreated. It is transmitted through infected bodily fluids
-                    and managed with lifelong antiretroviral therapy.
+                    A <span class="keyword">virus</span> that <span class="keyword">attacks the immune system</span> and may progress to <span class="keyword">AIDS</span>
+                    if untreated. It is <span class="keyword">transmitted</span> through <span class="keyword">bodily fluids</span>
+                    and managed with <span class="keyword">lifelong antiretroviral therapy</span>.
                 </td>
             </tr>
 
@@ -302,9 +299,9 @@ footer {
                 <td>Trichomoniasis</td>
                 <td>Parasitic</td>
                 <td>
-                    Caused by <em>Trichomonas vaginalis</em>.
-                    Symptoms may include genital itching, irritation,
-                    abnormal discharge, and painful urination.
+                    Caused by <em><span class="keyword">Trichomonas vaginalis</span></em>.
+                    Symptoms may include <span class="keyword">genital itching</span>, <span class="keyword">irritation</span>,
+                    <span class="keyword">abnormal discharge</span>, and <span class="keyword">painful urination</span>.
                 </td>
             </tr>
 
@@ -312,9 +309,9 @@ footer {
                 <td>Scabies</td>
                 <td>Parasitic</td>
                 <td>
-                    A skin infestation caused by microscopic mites,
-                    spread through prolonged skin-to-skin contact,
-                    leading to intense itching and rash.
+                    A <span class="keyword">skin infestation</span> caused by <span class="keyword">microscopic mites</span>,
+                    spread through <span class="keyword">prolonged skin-to-skin contact</span>,
+                    leading to <span class="keyword">intense itching</span> and <span class="keyword">rash</span>.
                 </td>
             </tr>
 
@@ -322,8 +319,8 @@ footer {
                 <td>Pubic Lice</td>
                 <td>Parasitic</td>
                 <td>
-                    Small parasitic insects that infest pubic hair,
-                    feed on blood, and cause persistent itching.
+                    <span class="keyword">Small parasitic insects</span> that <span class="keyword">infest pubic hair</span>,
+                    <span class="keyword">feed on blood</span>, and cause <span class="keyword">persistent itching</span>.
                 </td>
             </tr>
 
@@ -331,9 +328,9 @@ footer {
                 <td>Amebiasis &amp; Giardiasis</td>
                 <td>Parasitic</td>
                 <td>
-                    Intestinal infections caused by protozoan parasites,
-                    transmitted through contaminated food, water,
-                    or oral-anal sexual contact.
+                    <span class="keyword">Intestinal infections</span> caused by <span class="keyword">protozoan parasites</span>,
+                    transmitted through <span class="keyword">contaminated food</span>, <span class="keyword">water</span>,
+                    or <span class="keyword">oral-anal sexual contact</span>.
                 </td>
             </tr>
         </tbody>
@@ -344,4 +341,3 @@ footer {
 
 </body>
 </html>
-
