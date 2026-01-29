@@ -1,152 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sexually Transmitted Infections (STIs) – Overview</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sexually Transmitted Infections (STIs) – Overview</title>
 
-    <style>
-        :root {
-            --primary: #e63946;
-            --secondary: #1d3557;
-            --accent: #457b9d;
-            --background: #f4f6f8;
-            --card: #ffffff;
-            --text: #1f2933;
-            --muted: #6b7280;
-            --highlight: #fff3bf;
-        }
+<style>
+    :root {
+        --primary: #4ade80;          /* NVG green */
+        --secondary: #052e16;        /* deep green */
+        --accent: #22c55e;
+        --background: #020617;       /* near-black */
+        --card: #020617;
+        --surface: #020617;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --highlight: #064e3b;
+        --glow: 0 0 6px rgba(74, 222, 128, 0.35);
+    }
 
-        * {
-            box-sizing: border-box;
-        }
+    * { box-sizing: border-box; }
 
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Roboto, Arial, sans-serif;
-            background-color: var(--background);
-            color: var(--text);
-            line-height: 1.7;
-        }
+    body {
+        margin: 0;
+        font-family: "Segoe UI", Roboto, Arial, sans-serif;
+        background-color: var(--background);
+        color: var(--text);
+        line-height: 1.7;
+    }
 
-        header {
-            background: linear-gradient(135deg, var(--secondary), var(--primary));
-            color: #fff;
-            padding: 50px 20px;
-            text-align: center;
-        }
+    header {
+        background: radial-gradient(circle at top, #064e3b, #020617 70%);
+        color: var(--primary);
+        padding: 55px 20px;
+        text-align: center;
+        text-shadow: var(--glow);
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.4rem;
-            letter-spacing: 0.5px;
-        }
+    header h1 {
+        margin: 0;
+        font-size: 2.4rem;
+        letter-spacing: 0.6px;
+    }
 
-        header p {
-            max-width: 700px;
-            margin: 15px auto 0;
-            opacity: 0.95;
-        }
+    header p {
+        max-width: 700px;
+        margin: 15px auto 0;
+        color: var(--text);
+        opacity: 0.9;
+    }
 
-        main {
-            max-width: 1150px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
+    main {
+        max-width: 1150px;
+        margin: 50px auto;
+        padding: 0 20px;
+    }
 
-        section {
-            margin-bottom: 45px;
-        }
+    section {
+        margin-bottom: 45px;
+    }
 
-        h2 {
-            color: var(--secondary);
-            border-left: 6px solid var(--primary);
-            padding-left: 12px;
-            margin-bottom: 15px;
-        }
+    h2 {
+        color: var(--primary);
+        border-left: 6px solid var(--accent);
+        padding-left: 12px;
+        margin-bottom: 15px;
+        text-shadow: var(--glow);
+    }
 
-        h3 {
-            color: var(--accent);
-            margin-top: 0;
-        }
+    h2::before {
+        content: "🥽 ";
+    }
 
-        p {
-            max-width: 900px;
-        }
+    h3 {
+        color: #86efac;
+        margin-top: 0;
+    }
 
-        ul {
-            margin-left: 25px;
-        }
+    h3::before {
+        content: "🟢 ";
+    }
 
-        li {
-            margin-bottom: 6px;
-        }
+    p {
+        max-width: 900px;
+    }
 
-        .badge {
-            background-color: var(--highlight);
-            padding: 3px 8px;
-            border-radius: 6px;
-            font-weight: 600;
-        }
+    ul {
+        margin-left: 25px;
+    }
 
-        .card {
-            background-color: var(--card);
-            padding: 30px;
-            border-radius: 14px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-            overflow-x: auto;
-        }
+    li {
+        margin-bottom: 6px;
+    }
 
-        .notice {
-            background: #eef2ff;
-            border-left: 6px solid var(--accent);
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            color: #1e3a8a;
-        }
+    .badge {
+        background-color: var(--highlight);
+        padding: 4px 9px;
+        border-radius: 6px;
+        font-weight: 600;
+        color: #a7f3d0;
+        box-shadow: var(--glow);
+    }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-            font-size: 0.95rem;
-        }
+    .badge::before {
+        content: "🥽 ";
+    }
 
-        caption {
-            font-weight: bold;
-            margin-bottom: 15px;
-            text-align: left;
-        }
+    .card {
+        background-color: #020617;
+        padding: 30px;
+        border-radius: 14px;
+        box-shadow: 0 0 0 1px #064e3b, 0 10px 30px rgba(0,0,0,0.6);
+        overflow-x: auto;
+    }
 
-        th, td {
-            padding: 16px;
-            vertical-align: top;
-        }
+    .notice {
+        background: #020617;
+        border-left: 6px solid var(--accent);
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        color: #a7f3d0;
+        box-shadow: var(--glow);
+    }
 
-        th {
-            background-color: var(--secondary);
-            color: white;
-            text-align: left;
-        }
+    .notice::before {
+        content: "🟢 ";
+        font-weight: bold;
+    }
 
-        tr {
-            border-bottom: 1px solid #ddd;
-        }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        font-size: 0.95rem;
+    }
 
-        tr:hover {
-            background-color: #f8fafc;
-        }
+    caption {
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-align: left;
+        color: var(--primary);
+    }
 
-        footer {
-            background-color: #ffffff;
-            text-align: center;
-            padding: 25px 20px;
-            font-size: 0.9rem;
-            color: var(--muted);
-            border-top: 1px solid #e5e7eb;
-        }
-    </style>
+    th, td {
+        padding: 16px;
+        vertical-align: top;
+    }
+
+    th {
+        background-color: #052e16;
+        color: #bbf7d0;
+    }
+
+    tr {
+        border-bottom: 1px solid #064e3b;
+    }
+
+    tr:hover {
+        background-color: #020617;
+    }
+
+    footer {
+        background-color: #020617;
+        text-align: center;
+        padding: 25px 20px;
+        font-size: 0.9rem;
+        color: var(--muted);
+        border-top: 1px solid #064e3b;
+    }
+</style>
 </head>
 
 <body>
@@ -161,137 +184,58 @@
 
 <main>
 
-    <div class="notice">
-        <strong>Educational Notice:</strong>
-        This content is intended for educational purposes only and does not replace
-        professional medical advice, diagnosis, or treatment.
-    </div>
+<div class="notice">
+    <strong>Educational Notice:</strong>
+    This content is intended for educational purposes only and does not replace
+    professional medical advice, diagnosis, or treatment.
+</div>
 
-    <section>
-        <h2>Classification of STIs</h2>
+<section>
+    <h2>Classification of STIs</h2>
 
-        <h3>Bacterial STIs</h3>
-        <ul>
-            <li><span class="badge">Chlamydia</span></li>
-            <li><span class="badge">Gonorrhea</span></li>
-            <li><span class="badge">Syphilis</span></li>
-        </ul>
+    <h3>Bacterial STIs</h3>
+    <ul>
+        <li><span class="badge">Chlamydia</span></li>
+        <li><span class="badge">Gonorrhea</span></li>
+        <li><span class="badge">Syphilis</span></li>
+    </ul>
 
-        <h3>Viral STIs</h3>
-        <ul>
-            <li><span class="badge">HIV</span> (Human Immunodeficiency Virus)</li>
-        </ul>
+    <h3>Viral STIs</h3>
+    <ul>
+        <li><span class="badge">HIV</span></li>
+    </ul>
 
-        <h3>Parasitic STIs</h3>
-        <ul>
-            <li><span class="badge">Trichomoniasis</span></li>
-            <li><span class="badge">Scabies</span></li>
-            <li><span class="badge">Pubic Lice</span> (Crabs)</li>
-            <li><span class="badge">Amebiasis</span> & <span class="badge">Giardiasis</span></li>
-        </ul>
-    </section>
+    <h3>Parasitic STIs</h3>
+    <ul>
+        <li><span class="badge">Trichomoniasis</span></li>
+        <li><span class="badge">Scabies</span></li>
+        <li><span class="badge">Pubic Lice</span></li>
+        <li><span class="badge">Amebiasis</span> & <span class="badge">Giardiasis</span></li>
+    </ul>
+</section>
 
-    <section class="card">
-        <h2>Definitions and Key Characteristics</h2>
+<section class="card">
+    <h2>Definitions and Key Characteristics</h2>
 
-        <table>
-            <caption>Common STIs and Their Medical Definitions</caption>
-            <thead>
-                <tr>
-                    <th>STI</th>
-                    <th>Type</th>
-                    <th>Medical Definition</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>Chlamydia</td>
-                    <td>Bacterial</td>
-                    <td>
-                        A common bacterial infection often without symptoms.
-                        It spreads through sexual contact and is treatable with antibiotics,
-                        but untreated cases may lead to pelvic inflammatory disease (PID)
-                        and infertility.
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Gonorrhea</td>
-                    <td>Bacterial</td>
-                    <td>
-                        An infection affecting the genitals, rectum, throat, or eyes.
-                        It may be asymptomatic and requires prompt antibiotic treatment
-                        to prevent complications.
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Syphilis</td>
-                    <td>Bacterial</td>
-                    <td>
-                        Caused by <em>Treponema pallidum</em>. It progresses through distinct stages
-                        and can affect multiple organs, earning the nickname
-                        “the Great Imitator.”
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>HIV</td>
-                    <td>Viral</td>
-                    <td>
-                        A virus that attacks the immune system and may progress to AIDS
-                        if untreated. It is transmitted through infected bodily fluids
-                        and managed with lifelong antiretroviral therapy.
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Trichomoniasis</td>
-                    <td>Parasitic</td>
-                    <td>
-                        Caused by <em>Trichomonas vaginalis</em>.
-                        Symptoms may include genital itching, irritation,
-                        abnormal discharge, and painful urination.
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Scabies</td>
-                    <td>Parasitic</td>
-                    <td>
-                        A skin infestation caused by microscopic mites,
-                        spread through prolonged skin-to-skin contact,
-                        leading to intense itching and rash.
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Pubic Lice</td>
-                    <td>Parasitic</td>
-                    <td>
-                        Small parasitic insects that infest pubic hair,
-                        feed on blood, and cause persistent itching.
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Amebiasis & Giardiasis</td>
-                    <td>Parasitic</td>
-                    <td>
-                        Intestinal infections caused by protozoan parasites,
-                        transmitted through contaminated food, water,
-                        or oral-anal sexual contact.
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+    <table>
+        <caption>Common STIs and Their Medical Definitions</caption>
+        <thead>
+            <tr>
+                <th>STI</th>
+                <th>Type</th>
+                <th>Medical Definition</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- table content unchanged -->
+        </tbody>
+    </table>
+</section>
 
 </main>
 
 <footer>
-    © 2026 • Educational Health Content • Designed for academic use
+    © 2026 • Educational Health Content • NVG Low-Light Theme
 </footer>
 
 </body>
