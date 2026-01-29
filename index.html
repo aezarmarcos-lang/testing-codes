@@ -7,16 +7,15 @@
 
 <style>
     :root {
-        --primary: #4ade80;          /* NVG green */
-        --secondary: #052e16;        /* deep green */
-        --accent: #22c55e;
-        --background: #020617;       /* near-black */
+        --primary: #60a5fa;
+        --secondary: #020617;
+        --accent: #38bdf8;
+        --background: #020617;
         --card: #020617;
-        --surface: #020617;
         --text: #e5e7eb;
         --muted: #9ca3af;
-        --highlight: #064e3b;
-        --glow: 0 0 6px rgba(74, 222, 128, 0.35);
+        --highlight: #0f172a;
+        --glow: 0 0 6px rgba(96, 165, 250, 0.35);
     }
 
     * { box-sizing: border-box; }
@@ -30,7 +29,7 @@
     }
 
     header {
-        background: radial-gradient(circle at top, #064e3b, #020617 70%);
+        background: radial-gradient(circle at top, #0b1f3a, #020617 70%);
         color: var(--primary);
         padding: 55px 20px;
         text-align: center;
@@ -68,49 +67,37 @@
         text-shadow: var(--glow);
     }
 
-    h2::before {
-        content: "🥽 ";
-    }
+    h2::before { content: "🧿 "; }
 
     h3 {
-        color: #86efac;
+        color: #93c5fd;
         margin-top: 0;
     }
 
-    h3::before {
-        content: "🟢 ";
-    }
+    h3::before { content: "🔵 "; }
 
-    p {
-        max-width: 900px;
-    }
+    p { max-width: 900px; }
 
-    ul {
-        margin-left: 25px;
-    }
+    ul { margin-left: 25px; }
 
-    li {
-        margin-bottom: 6px;
-    }
+    li { margin-bottom: 6px; }
 
     .badge {
         background-color: var(--highlight);
         padding: 4px 9px;
         border-radius: 6px;
         font-weight: 600;
-        color: #a7f3d0;
+        color: #bfdbfe;
         box-shadow: var(--glow);
     }
 
-    .badge::before {
-        content: "🥽 ";
-    }
+    .badge::before { content: "🔹 "; }
 
     .card {
         background-color: #020617;
         padding: 30px;
         border-radius: 14px;
-        box-shadow: 0 0 0 1px #064e3b, 0 10px 30px rgba(0,0,0,0.6);
+        box-shadow: 0 0 0 1px #0f172a, 0 10px 30px rgba(0,0,0,0.6);
         overflow-x: auto;
     }
 
@@ -120,14 +107,11 @@
         padding: 15px 20px;
         border-radius: 8px;
         margin-bottom: 30px;
-        color: #a7f3d0;
+        color: #bfdbfe;
         box-shadow: var(--glow);
     }
 
-    .notice::before {
-        content: "🟢 ";
-        font-weight: bold;
-    }
+    .notice::before { content: "🔵 "; }
 
     table {
         width: 100%;
@@ -149,12 +133,12 @@
     }
 
     th {
-        background-color: #052e16;
-        color: #bbf7d0;
+        background-color: #0b1f3a;
+        color: #dbeafe;
     }
 
     tr {
-        border-bottom: 1px solid #064e3b;
+        border-bottom: 1px solid #0f172a;
     }
 
     tr:hover {
@@ -167,7 +151,7 @@
         padding: 25px 20px;
         font-size: 0.9rem;
         color: var(--muted);
-        border-top: 1px solid #064e3b;
+        border-top: 1px solid #0f172a;
     }
 </style>
 </head>
@@ -202,14 +186,14 @@
 
     <h3>Viral STIs</h3>
     <ul>
-        <li><span class="badge">HIV</span></li>
+        <li><span class="badge">HIV</span> (Human Immunodeficiency Virus)</li>
     </ul>
 
     <h3>Parasitic STIs</h3>
     <ul>
         <li><span class="badge">Trichomoniasis</span></li>
         <li><span class="badge">Scabies</span></li>
-        <li><span class="badge">Pubic Lice</span></li>
+        <li><span class="badge">Pubic Lice</span> (Crabs)</li>
         <li><span class="badge">Amebiasis</span> & <span class="badge">Giardiasis</span></li>
     </ul>
 </section>
@@ -227,7 +211,85 @@
             </tr>
         </thead>
         <tbody>
-            <!-- table content unchanged -->
+            <tr>
+                <td>Chlamydia</td>
+                <td>Bacterial</td>
+                <td>
+                    A common bacterial infection often without symptoms.
+                    It spreads through sexual contact and is treatable with antibiotics,
+                    but untreated cases may lead to pelvic inflammatory disease (PID)
+                    and infertility.
+                </td>
+            </tr>
+
+            <tr>
+                <td>Gonorrhea</td>
+                <td>Bacterial</td>
+                <td>
+                    An infection affecting the genitals, rectum, throat, or eyes.
+                    It may be asymptomatic and requires prompt antibiotic treatment
+                    to prevent complications.
+                </td>
+            </tr>
+
+            <tr>
+                <td>Syphilis</td>
+                <td>Bacterial</td>
+                <td>
+                    Caused by <em>Treponema pallidum</em>. It progresses through distinct stages
+                    and can affect multiple organs, earning the nickname
+                    “the Great Imitator.”
+                </td>
+            </tr>
+
+            <tr>
+                <td>HIV</td>
+                <td>Viral</td>
+                <td>
+                    A virus that attacks the immune system and may progress to AIDS
+                    if untreated. It is transmitted through infected bodily fluids
+                    and managed with lifelong antiretroviral therapy.
+                </td>
+            </tr>
+
+            <tr>
+                <td>Trichomoniasis</td>
+                <td>Parasitic</td>
+                <td>
+                    Caused by <em>Trichomonas vaginalis</em>.
+                    Symptoms may include genital itching, irritation,
+                    abnormal discharge, and painful urination.
+                </td>
+            </tr>
+
+            <tr>
+                <td>Scabies</td>
+                <td>Parasitic</td>
+                <td>
+                    A skin infestation caused by microscopic mites,
+                    spread through prolonged skin-to-skin contact,
+                    leading to intense itching and rash.
+                </td>
+            </tr>
+
+            <tr>
+                <td>Pubic Lice</td>
+                <td>Parasitic</td>
+                <td>
+                    Small parasitic insects that infest pubic hair,
+                    feed on blood, and cause persistent itching.
+                </td>
+            </tr>
+
+            <tr>
+                <td>Amebiasis &amp; Giardiasis</td>
+                <td>Parasitic</td>
+                <td>
+                    Intestinal infections caused by protozoan parasites,
+                    transmitted through contaminated food, water,
+                    or oral-anal sexual contact.
+                </td>
+            </tr>
         </tbody>
     </table>
 </section>
@@ -235,7 +297,7 @@
 </main>
 
 <footer>
-    © 2026 • Educational Health Content • NVG Low-Light Theme
+    © 2026 • Educational Health Content • Blue Low-Light Theme
 </footer>
 
 </body>
