@@ -6,153 +6,188 @@
 <title>Sexually Transmitted Infections (STIs) – Overview</title>
 
 <style>
-    :root {
-        --primary: #60a5fa;
-        --secondary: #020617;
-        --accent: #38bdf8;
-        --background: #020617;
-        --card: #020617;
-        --text: #e5e7eb;
-        --muted: #9ca3af;
-        --highlight: #0f172a;
-        --glow: 0 0 6px rgba(96, 165, 250, 0.35);
-    }
+:root {
+    --primary: #60a5fa;
+    --secondary: #020617;
+    --accent: #38bdf8;
+    --background: #020617;
+    --card: #020617;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --highlight: #0f172a;
+    --glow: 0 0 6px rgba(96, 165, 250, 0.35);
+}
 
-    * { box-sizing: border-box; }
+* { box-sizing: border-box; }
 
-    body {
-        margin: 0;
-        font-family: "Segoe UI", Roboto, Arial, sans-serif;
-        background-color: var(--background);
-        color: var(--text);
-        line-height: 1.7;
-    }
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
 
-    header {
-        background: radial-gradient(circle at top, #0b1f3a, #020617 70%);
-        color: var(--primary);
-        padding: 55px 20px;
-        text-align: center;
-        text-shadow: var(--glow);
-    }
+header {
+    background: radial-gradient(circle at top, #0b1f3a, #020617 70%);
+    color: var(--primary);
+    padding: 55px 20px;
+    text-align: center;
+    text-shadow: var(--glow);
+}
 
-    header h1 {
-        margin: 0;
-        font-size: 2.4rem;
-        letter-spacing: 0.6px;
-    }
+header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    letter-spacing: 0.6px;
+}
 
-    header p {
-        max-width: 700px;
-        margin: 15px auto 0;
-        color: var(--text);
-        opacity: 0.9;
-    }
+header p {
+    max-width: 700px;
+    margin: 15px auto 0;
+    color: var(--text);
+    opacity: 0.9;
+}
 
-    main {
-        max-width: 1150px;
-        margin: 50px auto;
-        padding: 0 20px;
-    }
+main {
+    max-width: 1150px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
 
-    section {
-        margin-bottom: 45px;
-    }
+section {
+    margin-bottom: 45px;
+}
 
-    h2 {
-        color: var(--primary);
-        border-left: 6px solid var(--accent);
-        padding-left: 12px;
-        margin-bottom: 15px;
-        text-shadow: var(--glow);
-    }
+/* Headings with SVG icons */
+h2 {
+    color: var(--primary);
+    border-left: 6px solid var(--accent);
+    padding-left: 12px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-shadow: var(--glow);
+}
 
-    h2::before { content: "🔺 "; }  /* Triangle for main headings */
+h2 svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--accent);
+    filter: drop-shadow(0 0 6px var(--accent));
+}
 
-    h3 {
-        color: #93c5fd;
-        margin-top: 0;
-    }
+h3 {
+    color: #93c5fd;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
-    h3::before { content: "⬛ "; }  /* Quadrilateral for subheadings */
+h3 svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--primary);
+    filter: drop-shadow(0 0 5px var(--primary));
+}
 
-    p { max-width: 900px; }
+/* Badge with SVG */
+.badge {
+    background-color: var(--highlight);
+    padding: 4px 9px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #bfdbfe;
+    box-shadow: var(--glow);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
 
-    ul { margin-left: 25px; }
+.badge svg {
+    width: 16px;
+    height: 16px;
+    fill: #38bdf8;
+    filter: drop-shadow(0 0 4px #38bdf8);
+}
 
-    li { margin-bottom: 6px; }
+/* Notice with SVG */
+.notice {
+    background: #020617;
+    border-left: 6px solid var(--accent);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    color: #bfdbfe;
+    box-shadow: var(--glow);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-    .badge {
-        background-color: var(--highlight);
-        padding: 4px 9px;
-        border-radius: 6px;
-        font-weight: 600;
-        color: #bfdbfe;
-        box-shadow: var(--glow);
-    }
+.notice svg {
+    width: 20px;
+    height: 20px;
+    fill: #f87171;
+    filter: drop-shadow(0 0 6px #f87171);
+}
 
-    .badge::before { content: "⬟ "; }  /* Pentagon for badges */
+p { max-width: 900px; }
 
-    .card {
-        background-color: #020617;
-        padding: 30px;
-        border-radius: 14px;
-        box-shadow: 0 0 0 1px #0f172a, 0 10px 30px rgba(0,0,0,0.6);
-        overflow-x: auto;
-    }
+ul { margin-left: 25px; }
 
-    .notice {
-        background: #020617;
-        border-left: 6px solid var(--accent);
-        padding: 15px 20px;
-        border-radius: 8px;
-        margin-bottom: 30px;
-        color: #bfdbfe;
-        box-shadow: var(--glow);
-    }
+li { margin-bottom: 6px; }
 
-    .notice::before { content: "⬢ "; }  /* Hexagon for notices */
+.card {
+    background-color: #020617;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 0 0 1px #0f172a, 0 10px 30px rgba(0,0,0,0.6);
+    overflow-x: auto;
+}
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 15px;
-        font-size: 0.95rem;
-    }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.95rem;
+}
 
-    caption {
-        font-weight: bold;
-        margin-bottom: 15px;
-        text-align: left;
-        color: var(--primary);
-    }
+caption {
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+    color: var(--primary);
+}
 
-    th, td {
-        padding: 16px;
-        vertical-align: top;
-    }
+th, td {
+    padding: 16px;
+    vertical-align: top;
+}
 
-    th {
-        background-color: #0b1f3a;
-        color: #dbeafe;
-    }
+th {
+    background-color: #0b1f3a;
+    color: #dbeafe;
+}
 
-    tr {
-        border-bottom: 1px solid #0f172a;
-    }
+tr {
+    border-bottom: 1px solid #0f172a;
+}
 
-    tr:hover {
-        background-color: #020617;
-    }
+tr:hover {
+    background-color: #020617;
+}
 
-    footer {
-        background-color: #020617;
-        text-align: center;
-        padding: 25px 20px;
-        font-size: 0.9rem;
-        color: var(--muted);
-        border-top: 1px solid #0f172a;
-    }
+footer {
+    background-color: #020617;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.9rem;
+    color: var(--muted);
+    border-top: 1px solid #0f172a;
+}
 </style>
 </head>
 
@@ -165,21 +200,39 @@
 <main>
 
 <section>
-    <h2>Classification of STIs</h2>
+    <h2>
+        <!-- Stethoscope SVG for main headings -->
+        <svg viewBox="0 0 24 24"><path d="M18 2v6h-2V4h-2v4h-2V2h6zm-8 8h2v6h-2v-6zm4 0h2v2h-2v-2zm-6 6h2v6h-2v-6zm4 0h2v2h-2v-2z"/></svg>
+        Classification of STIs
+    </h2>
 
-    <h3>Bacterial STIs</h3>
+    <h3>
+        <!-- Pill SVG for subheadings -->
+        <svg viewBox="0 0 24 24"><path d="M20.57 4.57c-1.76-1.76-4.61-1.76-6.36 0l-9.9 9.9a4.5 4.5 0 0 0 6.36 6.36l9.9-9.9c1.76-1.76 1.76-4.61 0-6.36zM6.41 17.41a2.5 2.5 0 0 1 0-3.54l4.24-4.24 3.54 3.54-4.24 4.24a2.5 2.5 0 0 1-3.54 0z"/></svg>
+        Bacterial STIs
+    </h3>
     <ul>
-        <li><span class="badge">Chlamydia</span></li>
+        <li><span class="badge">
+            <!-- DNA SVG for badges -->
+            <svg viewBox="0 0 24 24"><path d="M12 2c1 0 1.83.39 2.49 1.02l-1.44 1.44C12.88 4.34 12.46 4 12 4c-.46 0-.88.34-1.05.46L9.51 3.02C10.17 2.39 11 2 12 2zm0 20c-1 0-1.83-.39-2.49-1.02l1.44-1.44c.17.12.59.46 1.05.46.46 0 .88-.34 1.05-.46l1.44 1.44C13.83 21.61 13 22 12 22zm-6-6v-2h4v2H6zm10 0v-2h4v2h-4z"/></svg>
+            Chlamydia
+        </span></li>
         <li><span class="badge">Gonorrhea</span></li>
         <li><span class="badge">Syphilis</span></li>
     </ul>
 
-    <h3>Viral STIs</h3>
+    <h3>
+        <svg viewBox="0 0 24 24"><path d="M20.57 4.57c-1.76-1.76-4.61-1.76-6.36 0l-9.9 9.9a4.5 4.5 0 0 0 6.36 6.36l9.9-9.9c1.76-1.76 1.76-4.61 0-6.36zM6.41 17.41a2.5 2.5 0 0 1 0-3.54l4.24-4.24 3.54 3.54-4.24 4.24a2.5 2.5 0 0 1-3.54 0z"/></svg>
+        Viral STIs
+    </h3>
     <ul>
         <li><span class="badge">HIV</span> (Human Immunodeficiency Virus)</li>
     </ul>
 
-    <h3>Parasitic STIs</h3>
+    <h3>
+        <svg viewBox="0 0 24 24"><path d="M20.57 4.57c-1.76-1.76-4.61-1.76-6.36 0l-9.9 9.9a4.5 4.5 0 0 0 6.36 6.36l9.9-9.9c1.76-1.76 1.76-4.61 0-6.36zM6.41 17.41a2.5 2.5 0 0 1 0-3.54l4.24-4.24 3.54 3.54-4.24 4.24a2.5 2.5 0 0 1-3.54 0z"/></svg>
+        Parasitic STIs
+    </h3>
     <ul>
         <li><span class="badge">Trichomoniasis</span></li>
         <li><span class="badge">Scabies</span></li>
@@ -189,7 +242,10 @@
 </section>
 
 <section class="card">
-    <h2>Definitions and Key Characteristics</h2>
+    <h2>
+        <svg viewBox="0 0 24 24"><path d="M18 2v6h-2V4h-2v4h-2V2h6zm-8 8h2v6h-2v-6zm4 0h2v2h-2v-2zm-6 6h2v6h-2v-6zm4 0h2v2h-2v-2z"/></svg>
+        Definitions and Key Characteristics
+    </h2>
 
     <table>
         <caption>Common STIs and Their Medical Definitions</caption>
