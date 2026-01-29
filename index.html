@@ -3,82 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STIs – Types and Definitions</title>
+    <title>Sexually Transmitted Infections (STIs) – Overview</title>
 
     <style>
         :root {
             --primary: #e63946;
             --secondary: #1d3557;
-            --background: #f8f9fa;
+            --accent: #457b9d;
+            --background: #f4f6f8;
             --card: #ffffff;
-            --text: #222;
-            --highlight: #ffe066;
+            --text: #1f2933;
+            --muted: #6b7280;
+            --highlight: #fff3bf;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
             margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
             background-color: var(--background);
             color: var(--text);
             line-height: 1.7;
         }
 
         header {
-            background: linear-gradient(135deg, #e63946, #f77f00);
-            color: white;
-            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: #fff;
+            padding: 50px 20px;
             text-align: center;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.2rem;
+            font-size: 2.4rem;
+            letter-spacing: 0.5px;
         }
 
         header p {
-            margin-top: 10px;
-            opacity: 0.9;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.95;
         }
 
         main {
-            max-width: 1100px;
-            margin: 40px auto;
+            max-width: 1150px;
+            margin: 50px auto;
             padding: 0 20px;
         }
 
         section {
-            margin-bottom: 40px;
+            margin-bottom: 45px;
         }
 
         h2 {
             color: var(--secondary);
             border-left: 6px solid var(--primary);
-            padding-left: 10px;
+            padding-left: 12px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-top: 0;
+        }
+
+        p {
+            max-width: 900px;
         }
 
         ul {
             margin-left: 25px;
         }
 
-        .highlight {
+        li {
+            margin-bottom: 6px;
+        }
+
+        .badge {
             background-color: var(--highlight);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: 600;
         }
 
         .card {
             background-color: var(--card);
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
             overflow-x: auto;
+        }
+
+        .notice {
+            background: #eef2ff;
+            border-left: 6px solid var(--accent);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            color: #1e3a8a;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 10px;
+            margin-top: 15px;
+            font-size: 0.95rem;
         }
 
         caption {
@@ -88,7 +120,7 @@
         }
 
         th, td {
-            padding: 15px;
+            padding: 16px;
             vertical-align: top;
         }
 
@@ -103,14 +135,16 @@
         }
 
         tr:hover {
-            background-color: #f1f1f1;
+            background-color: #f8fafc;
         }
 
         footer {
+            background-color: #ffffff;
             text-align: center;
-            padding: 20px;
+            padding: 25px 20px;
             font-size: 0.9rem;
-            color: #555;
+            color: var(--muted);
+            border-top: 1px solid #e5e7eb;
         }
     </style>
 </head>
@@ -119,99 +153,135 @@
 
 <header>
     <h1>Sexually Transmitted Infections (STIs)</h1>
-    <p>Modern overview of <strong>types</strong> and <strong>definitions</strong></p>
+    <p>
+        A professional overview of common sexually transmitted infections,
+        including classification, definitions, and key medical facts.
+    </p>
 </header>
 
 <main>
 
-    <section>
-        <h2>Bacterial STIs</h2>
-        <ul>
-            <li><span class="highlight">Chlamydia</span></li>
-            <li><span class="highlight">Gonorrhea</span></li>
-            <li><span class="highlight">Syphilis</span></li>
-            <li><span class="highlight">HIV</span> (Human Immunodeficiency Virus)</li>
-        </ul>
-    </section>
+    <div class="notice">
+        <strong>Educational Notice:</strong>
+        This content is intended for educational purposes only and does not replace
+        professional medical advice, diagnosis, or treatment.
+    </div>
 
     <section>
-        <h2>Parasitic STIs</h2>
+        <h2>Classification of STIs</h2>
+
+        <h3>Bacterial STIs</h3>
         <ul>
-            <li><span class="highlight">Trichomoniasis</span></li>
-            <li><span class="highlight">Scabies</span></li>
-            <li><span class="highlight">Pubic Lice</span> (Crabs)</li>
-            <li><span class="highlight">Amebiasis</span> and <span class="highlight">Giardiasis</span></li>
+            <li><span class="badge">Chlamydia</span></li>
+            <li><span class="badge">Gonorrhea</span></li>
+            <li><span class="badge">Syphilis</span></li>
+        </ul>
+
+        <h3>Viral STIs</h3>
+        <ul>
+            <li><span class="badge">HIV</span> (Human Immunodeficiency Virus)</li>
+        </ul>
+
+        <h3>Parasitic STIs</h3>
+        <ul>
+            <li><span class="badge">Trichomoniasis</span></li>
+            <li><span class="badge">Scabies</span></li>
+            <li><span class="badge">Pubic Lice</span> (Crabs)</li>
+            <li><span class="badge">Amebiasis</span> & <span class="badge">Giardiasis</span></li>
         </ul>
     </section>
 
     <section class="card">
-        <h2>Definitions</h2>
+        <h2>Definitions and Key Characteristics</h2>
 
         <table>
-            <caption>Types and Definitions of STIs</caption>
+            <caption>Common STIs and Their Medical Definitions</caption>
             <thead>
                 <tr>
-                    <th>Bacterial STI</th>
-                    <th>Definition</th>
-                    <th>Parasitic STI</th>
-                    <th>Definition</th>
+                    <th>STI</th>
+                    <th>Type</th>
+                    <th>Medical Definition</th>
                 </tr>
             </thead>
 
             <tbody>
                 <tr>
-                    <td><span class="highlight">Chlamydia</span></td>
+                    <td>Chlamydia</td>
+                    <td>Bacterial</td>
                     <td>
-                        A very common STI that often shows <span class="highlight">no symptoms</span>.
-                        It spreads through sexual intercourse and is <span class="highlight">treatable with antibiotics</span>,
-                        but may cause <span class="highlight">infertility</span> or <span class="highlight">PID</span>.
-                    </td>
-                    <td><span class="highlight">Trichomoniasis</span></td>
-                    <td>
-                        Caused by the parasite <em>Trichomonas vaginalis</em>.
-                        Symptoms include <span class="highlight">itching</span>, <span class="highlight">strong-smelling discharge</span>,
-                        and <span class="highlight">painful urination</span>.
+                        A common bacterial infection often without symptoms.
+                        It spreads through sexual contact and is treatable with antibiotics,
+                        but untreated cases may lead to pelvic inflammatory disease (PID)
+                        and infertility.
                     </td>
                 </tr>
 
                 <tr>
-                    <td><span class="highlight">Gonorrhea</span></td>
+                    <td>Gonorrhea</td>
+                    <td>Bacterial</td>
                     <td>
-                        A bacterial infection affecting the <span class="highlight">rectum</span>, <span class="highlight">throat</span>,
-                        or <span class="highlight">eyes</span>. It may be asymptomatic and requires
-                        <span class="highlight">antibiotic treatment</span>.
-                    </td>
-                    <td><span class="highlight">Scabies</span></td>
-                    <td>
-                        A skin condition caused by <span class="highlight">mites</span> that spread through
-                        <span class="highlight">skin-to-skin contact</span>, causing intense itching.
+                        An infection affecting the genitals, rectum, throat, or eyes.
+                        It may be asymptomatic and requires prompt antibiotic treatment
+                        to prevent complications.
                     </td>
                 </tr>
 
                 <tr>
-                    <td><span class="highlight">Syphilis</span></td>
+                    <td>Syphilis</td>
+                    <td>Bacterial</td>
                     <td>
-                        Caused by <em>Treponema pallidum</em>. It progresses in <span class="highlight">stages</span>
-                        and can affect multiple organs. Known as the
-                        <span class="highlight">“Great Imitator”</span>.
-                    </td>
-                    <td><span class="highlight">Pubic Lice</span></td>
-                    <td>
-                        Small parasites that infest <span class="highlight">pubic hair</span>, feed on blood,
-                        and cause <span class="highlight">intense itching</span>.
+                        Caused by <em>Treponema pallidum</em>. It progresses through distinct stages
+                        and can affect multiple organs, earning the nickname
+                        “the Great Imitator.”
                     </td>
                 </tr>
 
                 <tr>
-                    <td><span class="highlight">HIV</span></td>
+                    <td>HIV</td>
+                    <td>Viral</td>
                     <td>
-                        A virus that attacks the <span class="highlight">immune system</span> and may lead to
-                        <span class="highlight">AIDS</span> if untreated. It spreads through infected bodily fluids.
+                        A virus that attacks the immune system and may progress to AIDS
+                        if untreated. It is transmitted through infected bodily fluids
+                        and managed with lifelong antiretroviral therapy.
                     </td>
-                    <td><span class="highlight">Amebiasis & Giardiasis</span></td>
+                </tr>
+
+                <tr>
+                    <td>Trichomoniasis</td>
+                    <td>Parasitic</td>
                     <td>
-                        Intestinal infections caused by <span class="highlight">protozoan parasites</span>,
-                        spread through <span class="highlight">oral-anal</span> contact.
+                        Caused by <em>Trichomonas vaginalis</em>.
+                        Symptoms may include genital itching, irritation,
+                        abnormal discharge, and painful urination.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Scabies</td>
+                    <td>Parasitic</td>
+                    <td>
+                        A skin infestation caused by microscopic mites,
+                        spread through prolonged skin-to-skin contact,
+                        leading to intense itching and rash.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Pubic Lice</td>
+                    <td>Parasitic</td>
+                    <td>
+                        Small parasitic insects that infest pubic hair,
+                        feed on blood, and cause persistent itching.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Amebiasis & Giardiasis</td>
+                    <td>Parasitic</td>
+                    <td>
+                        Intestinal infections caused by protozoan parasites,
+                        transmitted through contaminated food, water,
+                        or oral-anal sexual contact.
                     </td>
                 </tr>
             </tbody>
@@ -220,6 +290,9 @@
 
 </main>
 
+<footer>
+    © 2026 • Educational Health Content • Designed for academic use
+</footer>
+
 </body>
 </html>
-
