@@ -2,136 +2,227 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Computer Science 10 - PBLD 3rd Quarter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STIs – Types and Definitions</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+        :root {
+            --primary: #e63946;
+            --secondary: #1d3557;
+            --background: #f8f9fa;
+            --card: #ffffff;
+            --text: #222;
+            --highlight: #ffe066;
         }
 
-        h1, h2 {
-            color: #333;
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #e63946, #f77f00);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        header p {
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: var(--secondary);
+            border-left: 6px solid var(--primary);
+            padding-left: 10px;
+        }
+
+        ul {
+            margin-left: 25px;
+        }
+
+        .highlight {
+            background-color: var(--highlight);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .card {
+            background-color: var(--card);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            overflow-x: auto;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            border: 1px solid #000;
-            padding: 10px;
-            text-align: left;
-            vertical-align: top;
-        }
-
-        th {
-            background-color: red;
-            color: white;
+            margin-top: 10px;
         }
 
         caption {
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 15px;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: var(--secondary);
+            color: white;
+            text-align: left;
+        }
+
+        tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #555;
         }
     </style>
 </head>
 
 <body>
 
-<h1>Sexually Transmitted Infections (STIs): Types and Definitions</h1>
-<hr>
+<header>
+    <h1>Sexually Transmitted Infections (STIs)</h1>
+    <p>Modern overview of <strong>types</strong> and <strong>definitions</strong></p>
+</header>
 
-<h2>Bacterial STIs</h2>
-<h3>Its types:</h3>
-<ul>
-    <li>Chlamydia</li>
-    <li>Gonorrhea</li>
-    <li>Syphilis</li>
-    <li>HIV (Human Immunodeficiency Virus)</li>
-</ul>
+<main>
 
-<h2>Parasitic STIs</h2>
-<h3>Its types:</h3>
-<ul>
-    <li>Trichomoniasis</li>
-    <li>Scabies</li>
-    <li>Pubic Lice (Crabs)</li>
-    <li>Amebiasis and Giardiasis</li>
-</ul>
+    <section>
+        <h2>Bacterial STIs</h2>
+        <ul>
+            <li><span class="highlight">Chlamydia</span></li>
+            <li><span class="highlight">Gonorrhea</span></li>
+            <li><span class="highlight">Syphilis</span></li>
+            <li><span class="highlight">HIV</span> (Human Immunodeficiency Virus)</li>
+        </ul>
+    </section>
 
-<h2>Sexually Transmitted Infections Definitions</h2>
+    <section>
+        <h2>Parasitic STIs</h2>
+        <ul>
+            <li><span class="highlight">Trichomoniasis</span></li>
+            <li><span class="highlight">Scabies</span></li>
+            <li><span class="highlight">Pubic Lice</span> (Crabs)</li>
+            <li><span class="highlight">Amebiasis</span> and <span class="highlight">Giardiasis</span></li>
+        </ul>
+    </section>
 
-<table>
-    <caption>Types and Definitions</caption>
-    <thead>
-        <tr>
-            <th>Bacterial STI</th>
-            <th>Definition</th>
-            <th>Parasitic STI</th>
-            <th>Definition</th>
-        </tr>
-    </thead>
+    <section class="card">
+        <h2>Definitions</h2>
 
-    <tbody>
-        <tr>
-            <td>Chlamydia</td>
-            <td>
-                A very common STI that often shows no symptoms. It spreads through vaginal or anal intercourse.
-                It is treatable with antibiotics but can lead to infertility and Pelvic Inflammatory Disease (PID),
-                especially in women.
-            </td>
-            <td>Trichomoniasis</td>
-            <td>
-                A treatable infection caused by the parasite <em>Trichomonas vaginalis</em>. It is transmitted
-                through sexual contact and may cause strong-smelling discharge, itching, and painful urination.
-            </td>
-        </tr>
+        <table>
+            <caption>Types and Definitions of STIs</caption>
+            <thead>
+                <tr>
+                    <th>Bacterial STI</th>
+                    <th>Definition</th>
+                    <th>Parasitic STI</th>
+                    <th>Definition</th>
+                </tr>
+            </thead>
 
-        <tr>
-            <td>Gonorrhea</td>
-            <td>
-                A bacterial infection that can affect the rectum, throat, or eyes. It is transmitted through
-                sexual contact with infected fluids and may be asymptomatic. Antibiotics are required to prevent
-                complications such as infertility or PID.
-            </td>
-            <td>Scabies</td>
-            <td>
-                A skin condition caused by mites that spread through prolonged skin-to-skin contact, including
-                sexual contact. It causes intense itching, rashes, and visible burrows on the skin.
-            </td>
-        </tr>
+            <tbody>
+                <tr>
+                    <td><span class="highlight">Chlamydia</span></td>
+                    <td>
+                        A very common STI that often shows <span class="highlight">no symptoms</span>.
+                        It spreads through sexual intercourse and is <span class="highlight">treatable with antibiotics</span>,
+                        but may cause <span class="highlight">infertility</span> or <span class="highlight">PID</span>.
+                    </td>
+                    <td><span class="highlight">Trichomoniasis</span></td>
+                    <td>
+                        Caused by the parasite <em>Trichomonas vaginalis</em>.
+                        Symptoms include <span class="highlight">itching</span>, <span class="highlight">strong-smelling discharge</span>,
+                        and <span class="highlight">painful urination</span>.
+                    </td>
+                </tr>
 
-        <tr>
-            <td>Syphilis</td>
-            <td>
-                Caused by the bacterium <em>Treponema pallidum</em>. It spreads through sexual contact and progresses
-                in stages. It can affect many organs and is known as the “Great Imitator” due to varied symptoms.
-                It is treatable with antibiotics.
-            </td>
-            <td>Pubic Lice (Crabs)</td>
-            <td>
-                Small parasites that infest coarse body hair, especially in the pubic area. They feed on human
-                blood and cause intense itching.
-            </td>
-        </tr>
+                <tr>
+                    <td><span class="highlight">Gonorrhea</span></td>
+                    <td>
+                        A bacterial infection affecting the <span class="highlight">rectum</span>, <span class="highlight">throat</span>,
+                        or <span class="highlight">eyes</span>. It may be asymptomatic and requires
+                        <span class="highlight">antibiotic treatment</span>.
+                    </td>
+                    <td><span class="highlight">Scabies</span></td>
+                    <td>
+                        A skin condition caused by <span class="highlight">mites</span> that spread through
+                        <span class="highlight">skin-to-skin contact</span>, causing intense itching.
+                    </td>
+                </tr>
 
-        <tr>
-            <td>HIV (Human Immunodeficiency Virus)</td>
-            <td>
-                A virus that attacks the immune system. If untreated, it can lead to AIDS. It is transmitted
-                through unprotected sexual contact and exposure to infected blood or bodily fluids.
-            </td>
-            <td>Amebiasis and Giardiasis</td>
-            <td>
-                Intestinal infections caused by protozoan parasites. They can spread through oral-anal or
-                oral-genital contact and are more common among certain populations.
-            </td>
-        </tr>
-    </tbody>
-</table>
+                <tr>
+                    <td><span class="highlight">Syphilis</span></td>
+                    <td>
+                        Caused by <em>Treponema pallidum</em>. It progresses in <span class="highlight">stages</span>
+                        and can affect multiple organs. Known as the
+                        <span class="highlight">“Great Imitator”</span>.
+                    </td>
+                    <td><span class="highlight">Pubic Lice</span></td>
+                    <td>
+                        Small parasites that infest <span class="highlight">pubic hair</span>, feed on blood,
+                        and cause <span class="highlight">intense itching</span>.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><span class="highlight">HIV</span></td>
+                    <td>
+                        A virus that attacks the <span class="highlight">immune system</span> and may lead to
+                        <span class="highlight">AIDS</span> if untreated. It spreads through infected bodily fluids.
+                    </td>
+                    <td><span class="highlight">Amebiasis & Giardiasis</span></td>
+                    <td>
+                        Intestinal infections caused by <span class="highlight">protozoan parasites</span>,
+                        spread through <span class="highlight">oral-anal</span> contact.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<footer>
+    <p>Computer Science 10 – PBLD | 3rd Quarter</p>
+</footer>
 
 </body>
 </html>
